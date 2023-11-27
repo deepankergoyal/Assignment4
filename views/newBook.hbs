@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Add New Book</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 20px;
+      background-color: #f4f4f4; } h1 { margin-bottom: 20px; } form {
+      background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,
+      0, 0, 0.1); padding: 20px; width: 300px; margin: 0 auto; }
+      input[type="text"], input[type="number"], button { display: block; width:
+      100%; margin-bottom: 15px; padding: 10px; border: 1px solid #ccc;
+      border-radius: 4px; box-sizing: border-box; } button { background-color:
+      #007bff; color: #fff; cursor: pointer; } button:hover { background-color:
+      #0056b3; }
+    </style>
+  </head>
+  <body>
+    <h1>Add New Book</h1>
+    <form action="/books/new" method="post">
+
+      <input type="text" name="ISBN" placeholder="ISBN" />
+      <input type="text" name="img" placeholder="Image URL" />
+      <input type="text" name="title" placeholder="Title" />
+      <input type="text" name="author" placeholder="Author" />
+      <input type="number" name="inventory" placeholder="Inventory" />
+      <input type="text" name="category" placeholder="Category" />
+      <button type="submit">Add Book</button>
+    </form>
+  </body>
+</html>

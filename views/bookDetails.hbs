@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Book Details</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 20px;
+      background-color: #f4f4f4; } .card { background-color: #fff;
+      border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); overflow:
+      hidden; width: 300px; margin: 20px auto; } .card img { width: 100%;
+      height: auto; display: block; } .card-content { padding: 20px; } h2 {
+      color: #333; margin-top: 0; } p { color: #555; margin: 8px 0; }
+    </style>
+  </head>
+  <body>
+    <h1>Book Details</h1>
+
+    <div class="card">
+      <img src="{{book.img}}" alt="Book Cover" />
+      <div class="card-content">
+        <h2>{{book.title}}</h2>
+        <p>Author: {{book.author}}</p>
+        <p>ISBN: {{book.ISBN}}</p>
+      </div>
+    </div>
+
+  </body>
+</html>
