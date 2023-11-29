@@ -27,7 +27,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// Connecting to the MongoDB database
 mongoose.connect(database.url);
 
 // Book model from the schema definition
@@ -135,8 +134,16 @@ app.post("/books/new", async (req, res) => {
     res.status(500).send("Error adding new book");
   }
 });
-
-// Start the server
 app.listen(port, function () {
   console.log("App listening on port: " + port);
 });
+
+/****************************************************************************** ***
+ *	ITE5315 – Assignment 4
+ *	I declare that this assignment is my own work in accordance with Humber Academic Policy.   *  No part of this assignment has been copied manually or electronically from any other source *  (including web sites) or distributed to other students.
+ *
+ *	Name: Deepanker Student ID: N01545191 Date26 /11/2023
+ *
+ *
+ ******************************************************************************
+ **/

@@ -1,8 +1,9 @@
 const MongoClient = require("mongodb").MongoClient;
 const url = "mongodb://127.0.0.1:27017";
 
-async function findAll() {
-  const client = await MongoClient.connect(url, {
+function findAll() {
+  const client = MongoClient.connect(url, {
+    //await removed
     useNewUrlParser: true,
   }).catch((err) => {
     console.log("s2");
@@ -18,7 +19,7 @@ async function findAll() {
     console.log("3");
     let cursor = collection.find({}).limit(10);
     console.log("4");
-    await cursor.forEach((doc) => console.log(doc));
+    cursor.forEach((doc) => console.log(doc));
     console.log("5");
   } catch (err) {
     console.log(err);
